@@ -12,6 +12,8 @@
 		7C762CFF2294621D004C8704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C762CFD2294621D004C8704 /* Main.storyboard */; };
 		7C762D012294621E004C8704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C762D002294621E004C8704 /* Assets.xcassets */; };
 		7C762D042294621E004C8704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C762D022294621E004C8704 /* LaunchScreen.storyboard */; };
+		7C762D0E22946C0F004C8704 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C762D0D22946C0F004C8704 /* SecondViewController.swift */; };
+		7C762D1022947A15004C8704 /* StatusBarAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C762D0F22947A15004C8704 /* StatusBarAnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7C762D002294621E004C8704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C762D032294621E004C8704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C762D052294621E004C8704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C762D0D22946C0F004C8704 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7C762D0F22947A15004C8704 /* StatusBarAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarAnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				7C762CF92294621D004C8704 /* AppDelegate.swift */,
 				7C762CFB2294621D004C8704 /* ViewController.swift */,
+				7C762D0D22946C0F004C8704 /* SecondViewController.swift */,
+				7C762D0F22947A15004C8704 /* StatusBarAnimationViewController.swift */,
 				7C762CFD2294621D004C8704 /* Main.storyboard */,
 				7C762D002294621E004C8704 /* Assets.xcassets */,
 				7C762D022294621E004C8704 /* LaunchScreen.storyboard */,
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C762D0E22946C0F004C8704 /* SecondViewController.swift in Sources */,
+				7C762D1022947A15004C8704 /* StatusBarAnimationViewController.swift in Sources */,
 				7C762CFC2294621D004C8704 /* ViewController.swift in Sources */,
 				7C762CFA2294621D004C8704 /* AppDelegate.swift in Sources */,
 			);
@@ -285,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W9LPF538W;
 				INFOPLIST_FILE = StatusBarAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W9LPF538W;
 				INFOPLIST_FILE = StatusBarAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

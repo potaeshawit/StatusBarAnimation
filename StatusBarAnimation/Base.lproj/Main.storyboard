@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StatusBarAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoM-1z-Z2K">
+                                <rect key="frame" x="130" y="178" width="154" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="XAd-04-qTg"/>
+                                    <constraint firstAttribute="height" constant="44" id="gkG-fG-sxe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="present">
+                                    <color key="titleColor" red="0.52610892057418823" green="0.74975186586380005" blue="0.6397969126701355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HZ5-JT-QC6" kind="presentation" id="yDg-cC-Vvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uoM-1z-Z2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="134" id="GTN-ar-a12"/>
+                            <constraint firstItem="uoM-1z-Z2K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pRr-O9-Wz8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="666.66666666666674" y="115.84821428571428"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="3Xn-zD-ZQ5">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="HZ5-JT-QC6" customClass="SecondViewController" customModule="StatusBarAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azn-hl-62b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5x-TL-sfF">
+                                <rect key="frame" x="346" y="34" width="34" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjN-85-apz">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissButtonDidTouch:" destination="HZ5-JT-QC6" eventType="touchUpInside" id="x3v-eb-8xL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7rG-S7-c5R"/>
+                                    <constraint firstAttribute="bottom" secondItem="IjN-85-apz" secondAttribute="bottom" id="IUM-N7-Zd4"/>
+                                    <constraint firstItem="IjN-85-apz" firstAttribute="top" secondItem="P5x-TL-sfF" secondAttribute="top" id="IZY-Pu-Wy4"/>
+                                    <constraint firstItem="IjN-85-apz" firstAttribute="leading" secondItem="P5x-TL-sfF" secondAttribute="leading" id="RPJ-TB-iTp"/>
+                                    <constraint firstAttribute="trailing" secondItem="IjN-85-apz" secondAttribute="trailing" id="U9v-kp-krE"/>
+                                    <constraint firstAttribute="width" constant="34" id="rXC-46-f1a"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52610892057418823" green="0.74975186586380005" blue="0.6397969126701355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ypC-gH-sD7" firstAttribute="trailing" secondItem="P5x-TL-sfF" secondAttribute="trailing" constant="34" id="axl-hB-CA2"/>
+                            <constraint firstItem="P5x-TL-sfF" firstAttribute="top" secondItem="azn-hl-62b" secondAttribute="top" constant="34" id="n7w-tg-Vig"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ypC-gH-sD7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8As-1m-v2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488" y="116"/>
         </scene>
     </scenes>
 </document>
